@@ -1,13 +1,191 @@
 @import "_base.scss";
 
 main {
-  .wrap {
-    max-width: 100%;
-    text-align: center;
-    margin-bottom: 60px;
+  ul {
+    list-style: none;
+    padding: 0;
 
-    .hex_LOGO_title {
-      margin-bottom: 0;
+    li {
+      border-bottom: 2px solid $brown;
+      padding: 10px;
+    }
+
+    a {
+      color: $brown;
+    }
+
+    a:hover {
+      color: $red;
+    }
+  }
+
+  .wrap {
+    padding: 10px 100px 30px 100px;
+    font-size: 20px;
+    width: 100%;
+    display: inline-flex;
+
+    .title {
+      font-size: 26px;
+    }
+
+    .menu_area {
+      width: 25%;
+      margin-right: 5%;
+
+      .selected {
+        background-color: $brown;
+
+        a {
+          color: $white;
+
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+
+    .container {
+      width: 70%;
+
+      .bar {
+        display: inline-flex;
+        width: 100%;
+        .search_area {
+          position: relative;
+          width: 65%;
+          display: flex;
+          align-items: center;
+          margin-right: 5%;
+
+          .fa {
+            width: 10%;
+            height: 35px;
+            background-color: $brown;
+            color: $white;
+            border: unset;
+            outline: none;
+            cursor: pointer;
+            float: right;
+
+            &:hover {
+              color: $gray;
+            }
+          }
+
+          input {
+            width: 90%;
+            height: 35px;
+            font-size: 20px;
+            border-radius: unset;
+            border: 3px solid $brown;
+          }
+        }
+
+        .checkout_area {
+          width: 30%;
+          user-select: none;
+
+          li {
+            display: inline-flex;
+            border-bottom: unset;
+            cursor: pointer;
+
+            i {
+              font-size: 38px;
+            }
+
+            p:hover {
+              color: $primary;
+            }
+
+            .number {
+              background-color: $red;
+              color: $white;
+              border: 3px solid $orange;
+              height: 30px;
+              border-radius: 50%;
+              padding: 0 5px;
+              position: relative;
+              left: -10px;
+              top: 5px;
+            }
+          }
+
+          .divider {
+            cursor: unset;
+          }
+        }
+      }
+
+      .commodity_area {
+        width: 100%;
+
+        .card {
+          display: inline-block;
+          text-align: center;
+          width: 30%;
+          margin: 10px;
+          box-shadow: 3px 5px $lightgray;
+          position: relative;
+
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .heart-style {
+            position: absolute;
+            color: $white;
+            font-weight: bold;
+            font-size: 24px;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+
+            &:hover {
+              color: $red;
+            }
+          }
+
+          .hot-food {
+            position: absolute;
+            right: -20px;
+            top: 10px;
+            text-align: center;
+            background-color: $primary;
+            color: $white;
+            font-size: 20px;
+            padding: 2px 5px;
+            width: 100px;
+            transform: rotate(35deg);
+          }
+
+          img {
+            width: 100%;
+          }
+
+          .divider {
+            background-color: $brown;
+            height: 2px;
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
+
+        .btn {
+          border: 2px solid $orange;
+          color: $orange;
+          background-color: $white;
+          margin-bottom: 15px;
+
+          &:hover {
+            background-color: $orange;
+            color: $white;
+          }
+        }
+      }
     }
   }
 }

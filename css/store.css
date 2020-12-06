@@ -283,14 +283,208 @@ footer .hex_LOGO_area i:hover {
   }
 }
 
-main .wrap {
-  max-width: 100%;
-  text-align: center;
-  margin-bottom: 60px;
+main ul {
+  list-style: none;
+  padding: 0;
 }
 
-main .wrap .hex_LOGO_title {
-  margin-bottom: 0;
+main ul li {
+  border-bottom: 2px solid #3d1101;
+  padding: 10px;
+}
+
+main ul a {
+  color: #3d1101;
+}
+
+main ul a:hover {
+  color: red;
+}
+
+main .wrap {
+  padding: 10px 100px 30px 100px;
+  font-size: 20px;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+main .wrap .title {
+  font-size: 26px;
+}
+
+main .wrap .menu_area {
+  width: 25%;
+  margin-right: 5%;
+}
+
+main .wrap .menu_area .selected {
+  background-color: #3d1101;
+}
+
+main .wrap .menu_area .selected a {
+  color: white;
+}
+
+main .wrap .menu_area .selected a:hover {
+  color: red;
+}
+
+main .wrap .container {
+  width: 70%;
+}
+
+main .wrap .container .bar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+}
+
+main .wrap .container .bar .search_area {
+  position: relative;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5%;
+}
+
+main .wrap .container .bar .search_area .fa {
+  width: 10%;
+  height: 35px;
+  background-color: #3d1101;
+  color: white;
+  border: unset;
+  outline: none;
+  cursor: pointer;
+  float: right;
+}
+
+main .wrap .container .bar .search_area .fa:hover {
+  color: #686666;
+}
+
+main .wrap .container .bar .search_area input {
+  width: 90%;
+  height: 35px;
+  font-size: 20px;
+  border-radius: unset;
+  border: 3px solid #3d1101;
+}
+
+main .wrap .container .bar .checkout_area {
+  width: 30%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .wrap .container .bar .checkout_area li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-bottom: unset;
+  cursor: pointer;
+}
+
+main .wrap .container .bar .checkout_area li i {
+  font-size: 38px;
+}
+
+main .wrap .container .bar .checkout_area li p:hover {
+  color: #0078e7;
+}
+
+main .wrap .container .bar .checkout_area li .number {
+  background-color: red;
+  color: white;
+  border: 3px solid #f56c23;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0 5px;
+  position: relative;
+  left: -10px;
+  top: 5px;
+}
+
+main .wrap .container .bar .checkout_area .divider {
+  cursor: unset;
+}
+
+main .wrap .container .commodity_area {
+  width: 100%;
+}
+
+main .wrap .container .commodity_area .card {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  margin: 10px;
+  -webkit-box-shadow: 3px 5px lightgray;
+          box-shadow: 3px 5px lightgray;
+  position: relative;
+}
+
+main .wrap .container .commodity_area .card .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main .wrap .container .commodity_area .card .heart-style {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+main .wrap .container .commodity_area .card .heart-style:hover {
+  color: red;
+}
+
+main .wrap .container .commodity_area .card .hot-food {
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  text-align: center;
+  background-color: #0078e7;
+  color: white;
+  font-size: 20px;
+  padding: 2px 5px;
+  width: 100px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+main .wrap .container .commodity_area .card img {
+  width: 100%;
+}
+
+main .wrap .container .commodity_area .card .divider {
+  background-color: #3d1101;
+  height: 2px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+main .wrap .container .commodity_area .btn {
+  border: 2px solid #f56c23;
+  color: #f56c23;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+main .wrap .container .commodity_area .btn:hover {
+  background-color: #f56c23;
+  color: white;
 }
 
 /*----------------------------main RWD設計---------------------------*/
