@@ -1,0 +1,300 @@
+@import "_base.scss";
+
+main {
+  .wrap {
+    .secret_area {
+      padding: 50px;
+      background-color: $footer_bg;
+
+      .title {
+        position: relative;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 24px;
+
+        &:after,
+        &:before {
+          background: $black;
+          content: "";
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          width: 30%;
+        }
+
+        &:after {
+          left: -30px;
+        }
+
+        &:before {
+          right: -30px;
+        }
+      }
+
+      .content_area {
+        display: inline-flex;
+        text-align: center;
+        margin-top: 30px;
+
+        div {
+          width: 30%;
+          margin-left: 2%;
+          margin-right: 1%;
+        }
+
+        img {
+          max-width: 100%;
+          border-radius: 50%;
+        }
+
+        .content_title {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .chef_area {
+      background-color: $brown;
+      color: $white;
+      display: inline-flex;
+
+      .photo_area {
+        padding-left: 50px;
+        img {
+          height: 100%;
+        }
+      }
+
+      .introduction_area {
+        padding: 60px 30px;
+        font-size: 20px;
+      }
+    }
+
+    .thoughts_area {
+      padding: 50px;
+      background-color: $footer_bg;
+      text-align: center;
+
+      .title {
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      .container {
+        display: inline-flex;
+        margin-top: 25px;
+
+        .content_area {
+          display: inline-flex;
+          text-align: left;
+          padding-right: 30px;
+
+          img {
+            max-width: 100px;
+            border-radius: 50%;
+          }
+
+          .introduction_area {
+            padding: 0 10px 10px 10px;
+
+            .author_name {
+              font-size: 20px;
+            }
+
+            .appellation {
+              text-align: right;
+              color: change_opacity($brown, 0.6);
+            }
+          }
+        }
+      }
+    }
+
+    .position_area {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 60px;
+
+      .title {
+        font-size: 26px;
+      }
+
+      .container {
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+
+        .map {
+          padding: 20px 50px 20px 20px;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .content {
+          text-align: left;
+          width: 50%;
+
+          input[type="number"],
+          input[type="email"],
+          input[type="text"] {
+            width: 80%;
+          }
+        }
+      }
+
+      .btn_area {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 18.5%;
+
+        button {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------main RWD設計---------------------------*/
+@media (max-width: 768px) {
+  main {
+    .wrap {
+      .chef_area {
+        display: block;
+
+        .photo_area {
+          display: flex;
+          justify-content: center;
+          padding-left: 0;
+          padding-top: 30px;
+
+          img {
+            max-width: 200px;
+            height: unset;
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+        }
+
+        .introduction_area {
+          padding-top: 0;
+        }
+      }
+
+      .thoughts_area {
+        .container {
+          display: block;
+
+          .content_area {
+            padding-left: 30px;
+          }
+        }
+      }
+
+      .position_area {
+        .container {
+          .btn_area {
+            margin-top: 30px;
+            padding-right: 16.5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//以下歸為手機板
+@media (max-width: 426px) {
+  main {
+    .wrap {
+      .secret_area {
+        .title:after,
+        .title:before {
+          content: unset;
+        }
+
+        .content_area {
+          display: block;
+
+          div {
+            width: 100%;
+            margin: 0;
+          }
+        }
+      }
+
+      .thoughts_area {
+        padding-top: 30px;
+        .container {
+          .content_area {
+            display: block;
+            border-bottom: 2px solid $gray;
+            margin-bottom: 15px;
+
+            .photo_area {
+              text-align: center;
+            }
+
+            img {
+              width: 300px;
+            }
+
+            &:nth-last-child(1) {
+              border: none;
+            }
+
+            .introduction_area {
+              .author_name {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      .position_area {
+        .container {
+          display: block;
+
+          .map {
+            padding: 0;
+          }
+
+          .content {
+            width: 100%;
+            padding-left: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    .wrap {
+      .secret_area {
+        .title {
+          font-size: 22px;
+        }
+      }
+
+      .thoughts_area {
+        padding: 30px;
+      }
+
+      .position_area {
+        .container {
+          .content {
+            padding-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}

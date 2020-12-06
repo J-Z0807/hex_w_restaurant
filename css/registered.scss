@@ -1,0 +1,98 @@
+@import "_base.scss";
+
+main {
+  .wrap {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+
+    .hex_LOGO_title {
+      margin-bottom: 0;
+    }
+
+    .introduction {
+      font-weight: 800;
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    form {
+      border-top: 3px solid orangered;
+      box-shadow: 4px 3px $lightgray;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 10px;
+
+      .container {
+        display: inline-flex;
+
+        .terms {
+          margin-right: 5%;
+        }
+      }
+
+      * {
+        width: 100%;
+      }
+
+      p {
+        text-align: left;
+        font-size: 16px;
+      }
+
+      .btn {
+        width: 45%;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 22px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .existing_account {
+        color: $red;
+        cursor: pointer;
+        user-select: none;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        width: 28%;
+
+        &:hover {
+          color: $lightblue;
+        }
+      }
+
+      .btn_area {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+/*----------------------------main RWD設計---------------------------*/
+@media (max-width: 768px) {
+}
+
+//以下歸為手機板
+@media (max-width: 426px) {
+  main {
+    .wrap {
+      form {
+        .container {
+          display: block;
+
+          .terms {
+            border-bottom: 2px dashed $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+}

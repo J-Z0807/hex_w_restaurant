@@ -1,0 +1,24 @@
+@import "_base.scss";
+
+main {
+  .wrap {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+
+    .hex_LOGO_title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*----------------------------main RWD設計---------------------------*/
+@media (max-width: 768px) {
+}
+
+//以下歸為手機板
+@media (max-width: 426px) {
+}
+
+@media (max-width: 320px) {
+}
