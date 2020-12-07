@@ -3,6 +3,7 @@
 body {
   margin: 0;
   color: #3d1101;
+  word-wrap: break-word;
 }
 
 body a {

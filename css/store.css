@@ -3,6 +3,7 @@
 body {
   margin: 0;
   color: #3d1101;
+  word-wrap: break-word;
 }
 
 body a {
@@ -302,7 +303,7 @@ main ul a:hover {
 }
 
 main .wrap {
-  padding: 10px 100px 30px 100px;
+  padding: 10px 30px 30px 30px;
   font-size: 20px;
   width: 100%;
   display: -webkit-inline-box;
@@ -488,4 +489,53 @@ main .wrap .container .commodity_area .btn:hover {
 }
 
 /*----------------------------main RWD設計---------------------------*/
+@media (max-width: 768px) {
+  main .wrap {
+    padding: 50px;
+  }
+  main .wrap .title {
+    white-space: nowrap;
+    margin-top: 0;
+  }
+  main .wrap .menu_area {
+    margin-right: 10%;
+  }
+  main .wrap .container .bar {
+    display: block;
+  }
+  main .wrap .container .bar .search_area {
+    width: 100%;
+  }
+  main .wrap .container .bar .checkout_area {
+    width: 100%;
+  }
+  main .wrap .container .bar .checkout_area ul {
+    margin-top: 0;
+  }
+  main .wrap .container .commodity_area .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 426px) {
+  main .wrap {
+    display: block;
+    padding: 20px;
+  }
+  main .wrap .menu_area {
+    width: 100%;
+  }
+  main .wrap .container {
+    width: 100%;
+  }
+  main .wrap .container .bar .search_area .fa {
+    width: 15%;
+  }
+  main .wrap .container .bar .checkout_area ul {
+    margin-bottom: 0;
+  }
+  main .wrap .container .commodity_area .card {
+    width: 95%;
+  }
+}
 /*# sourceMappingURL=store.css.map */

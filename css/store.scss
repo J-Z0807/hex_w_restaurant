@@ -20,7 +20,7 @@ main {
   }
 
   .wrap {
-    padding: 10px 100px 30px 100px;
+    padding: 10px 30px 30px 30px;
     font-size: 20px;
     width: 100%;
     display: inline-flex;
@@ -192,10 +192,82 @@ main {
 
 /*----------------------------main RWD設計---------------------------*/
 @media (max-width: 768px) {
+  main {
+    .wrap {
+      padding: 50px;
+
+      .title {
+        white-space: nowrap;
+        margin-top: 0;
+      }
+
+      .menu_area {
+        margin-right: 10%;
+      }
+
+      .container {
+        .bar {
+          display: block;
+
+          .search_area {
+            width: 100%;
+          }
+
+          .checkout_area {
+            width: 100%;
+
+            ul {
+              margin-top: 0;
+            }
+          }
+        }
+
+        .commodity_area {
+          .card {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
 }
 
 //以下歸為手機板
 @media (max-width: 426px) {
+  main {
+    .wrap {
+      display: block;
+      padding: 20px;
+
+      .menu_area {
+        width: 100%;
+      }
+
+      .container {
+        width: 100%;
+
+        .bar {
+          .search_area {
+            .fa {
+              width: 15%;
+            }
+          }
+
+          .checkout_area {
+            ul {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .commodity_area {
+          .card {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {

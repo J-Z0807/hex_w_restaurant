@@ -42,6 +42,7 @@ $footer_bg: #f0e8e5;
 body {
   margin: 0;
   color: $brown;
+  word-wrap: break-word;
 
   a {
     text-decoration: none;
