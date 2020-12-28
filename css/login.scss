@@ -32,6 +32,12 @@ main {
         font-size: 16px;
       }
 
+      label {
+        display: block;
+        text-align: left;
+        margin: 10px 0;
+      }
+
       .btn {
         width: 45%;
       }

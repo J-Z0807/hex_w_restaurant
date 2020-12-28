@@ -5,11 +5,6 @@ main {
     list-style: none;
     padding: 0;
 
-    li {
-      border-bottom: 2px solid $brown;
-      padding: 10px;
-    }
-
     a {
       color: $brown;
     }
@@ -33,6 +28,15 @@ main {
       width: 25%;
       margin-right: 5%;
 
+      li {
+        border-bottom: 2px solid $brown;
+        padding: 10px;
+      }
+
+      a {
+        display: block;
+      }
+
       .selected {
         background-color: $brown;
 
@@ -50,8 +54,8 @@ main {
       width: 70%;
 
       .bar {
-        display: inline-flex;
-        width: 100%;
+        display: flex;
+
         .search_area {
           position: relative;
           width: 65%;
@@ -89,7 +93,6 @@ main {
 
           li {
             display: inline-flex;
-            border-bottom: unset;
             cursor: pointer;
 
             i {
@@ -115,12 +118,12 @@ main {
 
           .divider {
             cursor: unset;
+            padding: 0 10px;
           }
         }
       }
 
       .commodity_area {
-        width: 100%;
 
         .card {
           display: inline-block;
@@ -232,19 +235,21 @@ main {
   }
 }
 
-//以下歸為手機板
-@media (max-width: 426px) {
+//手機到平板之間
+@media (max-width: 767px) {
   main {
     .wrap {
       display: block;
       padding: 20px;
 
       .menu_area {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
       }
 
       .container {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
 
         .bar {
           .search_area {
@@ -270,5 +275,17 @@ main {
   }
 }
 
-@media (max-width: 320px) {
+//以下歸為手機板
+@media (max-width: 426px) {
+  main {
+    .wrap {
+      .menu_area {
+        width: 100%;
+      }
+
+      .container {
+        width: 100%;
+      }
+    }
+  }
 }

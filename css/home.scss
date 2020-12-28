@@ -36,12 +36,8 @@ main {
         display: inline-flex;
         text-align: center;
         margin-top: 30px;
-
-        div {
-          width: 30%;
-          margin-left: 2%;
-          margin-right: 1%;
-        }
+        list-style: none;
+        padding-left: 0;
 
         img {
           max-width: 100%;
@@ -61,6 +57,7 @@ main {
 
       .photo_area {
         padding-left: 50px;
+
         img {
           height: 100%;
         }
@@ -85,6 +82,7 @@ main {
       .container {
         display: inline-flex;
         margin-top: 25px;
+        padding-left: 0;
 
         .content_area {
           display: inline-flex;
@@ -125,6 +123,7 @@ main {
         display: inline-flex;
         width: 100%;
         justify-content: center;
+        padding: 0 30px;
 
         .map {
           padding: 20px 50px 20px 20px;
@@ -143,11 +142,19 @@ main {
           input[type="text"] {
             width: 80%;
           }
+
+          label {
+            display: block;
+            margin: 5px 0;
+          }
+
+          .no_wrap {
+            display: inline-block;
+          }
         }
       }
 
       .btn_area {
-        width: 100%;
         display: flex;
         justify-content: flex-end;
         padding-right: 18.5%;
@@ -161,6 +168,34 @@ main {
 }
 
 /*----------------------------main RWD設計---------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+  main {
+    .wrap {
+      .chef_area {
+        display: block;
+
+        .photo_area {
+          display: flex;
+          justify-content: center;
+          padding-left: 0;
+          padding-top: 30px;
+
+          img {
+            max-width: 200px;
+            height: unset;
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+        }
+
+        .introduction_area {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   main {
     .wrap {
@@ -209,10 +244,11 @@ main {
 }
 
 //以下歸為手機板
-@media (max-width: 426px) {
+@media (max-width: 767px) {
   main {
     .wrap {
       .secret_area {
+
         .title:after,
         .title:before {
           content: unset;
@@ -230,6 +266,7 @@ main {
 
       .thoughts_area {
         padding-top: 30px;
+
         .container {
           .content_area {
             display: block;
@@ -267,7 +304,7 @@ main {
 
           .content {
             width: 100%;
-            padding-left: 80px;
+            padding-left: 30px;
           }
         }
       }
@@ -286,14 +323,6 @@ main {
 
       .thoughts_area {
         padding: 30px;
-      }
-
-      .position_area {
-        .container {
-          .content {
-            padding-left: 60px;
-          }
-        }
       }
     }
   }

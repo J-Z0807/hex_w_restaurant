@@ -28,11 +28,14 @@ main {
 
         .terms {
           margin-right: 5%;
+          width: 60%;
         }
       }
 
-      * {
-        width: 100%;
+      label {
+        display: block;
+        text-align: left;
+        margin: 10px 0;
       }
 
       p {
@@ -49,6 +52,12 @@ main {
         font-size: 22px;
         margin: 0;
         text-align: center;
+      }
+
+      .input_box {
+        input {
+          width: 100%;
+        }
       }
 
       .existing_account {
@@ -74,9 +83,6 @@ main {
 }
 
 /*----------------------------main RWD設計---------------------------*/
-@media (max-width: 768px) {
-}
-
 //以下歸為手機板
 @media (max-width: 426px) {
   main {
@@ -87,12 +93,10 @@ main {
 
           .terms {
             border-bottom: 2px dashed $orange;
+            width: 100%;
           }
         }
       }
     }
   }
-}
-
-@media (max-width: 320px) {
 }
