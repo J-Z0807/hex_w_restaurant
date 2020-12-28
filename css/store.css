@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/*----------------------------此CSS主要處理基本設定及header or footer的設計(包括兩者的RWD)----------------------------------------*/
+body {
+  margin: 0;
+  color: #3d1101;
+  word-wrap: break-word;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body input {
+  padding: 0.5em 0.6em;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 3px #ddd;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+}
+
+body .input_box {
+  position: relative;
+}
+
+body .input_box .fa {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 50px;
+}
+
+body .input_box input {
+  padding-left: 40px;
+}
+
+body *,
+body *:after,
+body *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body .fa-google-plus-square {
+  color: red;
+}
+
+body .fa-twitter-square {
+  color: #337aff;
+}
+
+body .fa-facebook-square {
+  color: #3336ff;
+}
+
+body .hex_LOGO_title {
+  font-weight: bold;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+body .btn {
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 10px 25px;
+  border: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+body .btn:hover {
+  opacity: 0.8;
+}
+
+body .btn-gray {
+  background-color: #686666;
+}
+
+body .btn-orange {
+  background-color: #f56c23;
+}
+
+body .hamburg_bar {
+  color: white;
+  font-size: 28px;
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+body .hamburg_bar_show .menu-list {
+  display: inline-block;
+  float: none;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  background-color: #686666;
+}
+
+/* header區 */
+header .nav {
+  background: black;
+  padding: 10px;
+}
+
+header .nav .logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+header .nav .menu-list {
+  float: right;
+  position: relative;
+  top: -9px;
+}
+
+header .nav .menu-item {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .nav .menu-item:hover {
+  border-bottom: 3px solid #0004ff;
+}
+
+header .nav .menu-link {
+  color: white;
+  font-size: 18px;
+  display: block;
+}
+
+header .nav .menu-selected {
+  border-bottom: 3px solid #1df700;
+}
+
+header .banner {
+  background-image: url("../assets/header_desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 610px;
+}
+
+header .banner .title {
+  font-size: 33px;
+  font-weight: bold;
+}
+
+header .banner .content {
+  margin: 0 auto;
+  color: white;
+  font-size: 20px;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top: 160px;
+}
+
+header .banner h1 {
+  white-space: nowrap;
+}
+
+/* main區 由其他檔案匯入*/
+/*----------------------------------------------------*/
+/* footer區 */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f0e8e5;
+}
+
+footer .title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+footer .about_hex {
+  width: 25%;
+  margin-right: 5%;
+}
+
+footer .contact {
+  width: 35%;
+}
+
+footer .contact ul {
+  padding-left: 20px;
+}
+
+footer .hex_LOGO_area {
+  text-align: right;
+}
+
+footer .hex_LOGO_area ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0;
+}
+
+footer .hex_LOGO_area i {
+  font-size: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+footer .hex_LOGO_area i:hover {
+  opacity: 0.5;
+}
+
+/*----------------------------header and footer RWD設計--------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1030px) {
+  header .banner {
+    height: 280px;
+    background-position: center;
+  }
+  header .banner .content {
+    position: unset;
+    max-width: unset;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  header .banner {
+    height: 280px;
+    background-position: center;
+  }
+  header .banner .content {
+    position: unset;
+    max-width: unset;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    display: inline-block;
+  }
+  footer .about_hex,
+  footer .contact {
+    width: 100%;
+    padding: 0 10%;
+    border-bottom: 1px solid #686666;
+  }
+  footer .hex_LOGO_area {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 426px) {
+  header .hamburg_bar {
+    display: block;
+  }
+  header .hamburg_bar_show .menu-list {
+    display: -ms-grid;
+    display: grid;
+    padding-left: 0;
+    background-color: rgba(104, 102, 102, 0.9);
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    clear: both;
+  }
+  header .hamburg_bar_show .menu-list .menu-item {
+    margin-right: 0;
+    line-height: 3;
+    border-bottom: 2px dashed #f56c23;
+    text-align: center;
+  }
+  header .hamburg_bar_show .menu-list .menu-item:nth-last-child(1) {
+    border-bottom: unset;
+  }
+  header .hamburg_bar_show .menu-list .menu-selected {
+    background-color: rgba(0, 120, 231, 0.6);
+  }
+  header .banner {
+    background-image: url(../assets/header_mobile.png);
+    height: 250px;
+  }
+  header .banner .title {
+    font-size: 28px;
+  }
+  header .banner .content {
+    font-size: 16px;
+    max-width: 350px;
+    height: 200px;
+  }
+  header .banner .content h1 {
+    white-space: break-spaces;
+  }
+  header .menu-list {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  header .banner {
+    height: 200px;
+  }
+  header .banner .title {
+    font-size: 26px;
+  }
+  header .banner .content {
+    max-width: 100%;
+  }
+}
+
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul a {
+  color: #3d1101;
+}
+
+main ul a:hover {
+  color: red;
+}
+
+main .wrap {
+  padding: 10px 30px 30px 30px;
+  font-size: 20px;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+main .wrap .title {
+  font-size: 26px;
+}
+
+main .wrap .menu_area {
+  width: 25%;
+  margin-right: 5%;
+}
+
+main .wrap .menu_area li {
+  border-bottom: 2px solid #3d1101;
+  padding: 10px;
+}
+
+main .wrap .menu_area a {
+  display: block;
+}
+
+main .wrap .menu_area .selected {
+  background-color: #3d1101;
+}
+
+main .wrap .menu_area .selected a {
+  color: white;
+}
+
+main .wrap .menu_area .selected a:hover {
+  color: red;
+}
+
+main .wrap .container {
+  width: 70%;
+}
+
+main .wrap .container .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .wrap .container .bar .search_area {
+  position: relative;
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5%;
+}
+
+main .wrap .container .bar .search_area .fa {
+  width: 10%;
+  height: 35px;
+  background-color: #3d1101;
+  color: white;
+  border: unset;
+  outline: none;
+  cursor: pointer;
+  float: right;
+}
+
+main .wrap .container .bar .search_area .fa:hover {
+  color: #686666;
+}
+
+main .wrap .container .bar .search_area input {
+  width: 90%;
+  height: 35px;
+  font-size: 20px;
+  border-radius: unset;
+  border: 3px solid #3d1101;
+}
+
+main .wrap .container .bar .checkout_area {
+  width: 30%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .wrap .container .bar .checkout_area li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+main .wrap .container .bar .checkout_area li i {
+  font-size: 38px;
+}
+
+main .wrap .container .bar .checkout_area li p:hover {
+  color: #0078e7;
+}
+
+main .wrap .container .bar .checkout_area li .number {
+  background-color: red;
+  color: white;
+  border: 3px solid #f56c23;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0 5px;
+  position: relative;
+  left: -10px;
+  top: 5px;
+}
+
+main .wrap .container .bar .checkout_area .divider {
+  cursor: unset;
+  padding: 0 10px;
+}
+
+main .wrap .container .commodity_area .card {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  margin: 10px;
+  -webkit-box-shadow: 3px 5px lightgray;
+          box-shadow: 3px 5px lightgray;
+  position: relative;
+}
+
+main .wrap .container .commodity_area .card .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main .wrap .container .commodity_area .card .heart-style {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+main .wrap .container .commodity_area .card .heart-style:hover {
+  color: red;
+}
+
+main .wrap .container .commodity_area .card .hot-food {
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  text-align: center;
+  background-color: #0078e7;
+  color: white;
+  font-size: 20px;
+  padding: 2px 5px;
+  width: 100px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+main .wrap .container .commodity_area .card img {
+  width: 100%;
+}
+
+main .wrap .container .commodity_area .card .divider {
+  background-color: #3d1101;
+  height: 2px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+main .wrap .container .commodity_area .btn {
+  border: 2px solid #f56c23;
+  color: #f56c23;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+main .wrap .container .commodity_area .btn:hover {
+  background-color: #f56c23;
+  color: white;
+}
+
+/*----------------------------main RWD設計---------------------------*/
+@media (max-width: 768px) {
+  main .wrap {
+    padding: 50px;
+  }
+  main .wrap .title {
+    white-space: nowrap;
+    margin-top: 0;
+  }
+  main .wrap .menu_area {
+    margin-right: 10%;
+  }
+  main .wrap .container .bar {
+    display: block;
+  }
+  main .wrap .container .bar .search_area {
+    width: 100%;
+  }
+  main .wrap .container .bar .checkout_area {
+    width: 100%;
+  }
+  main .wrap .container .bar .checkout_area ul {
+    margin-top: 0;
+  }
+  main .wrap .container .commodity_area .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  main .wrap {
+    display: block;
+    padding: 20px;
+  }
+  main .wrap .menu_area {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main .wrap .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main .wrap .container .bar .search_area .fa {
+    width: 15%;
+  }
+  main .wrap .container .bar .checkout_area ul {
+    margin-bottom: 0;
+  }
+  main .wrap .container .commodity_area .card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 426px) {
+  main .wrap .menu_area {
+    width: 100%;
+  }
+  main .wrap .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=store.css.map */
